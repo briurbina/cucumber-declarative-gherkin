@@ -32,6 +32,12 @@ function isAcceptableCreditScore(data) {
   return user && user.creditScore >= 661
 }
 
+function isUpgradeable(data) {
+  const user = getUserData(data.firstName, data.lastName)
+  console.log("isUpgradeable", JSON.stringify(user, null, 2));
+  return data && data.investmentsAmount && data.investmentsAmount >= 200000000
+}
+  
 // This does a monthly debt to income check and ensure is acceptable.
 function isAcceptableBackEndRatio(data) {
   if (data && data.monthlyHousingPayment && data.monthlyIncome) {
@@ -62,10 +68,15 @@ export function useProviderFormData() {
     return isAcceptableCreditScore(data) 
     && isAcceptableBackEndRatio(data) 
   }
+  const isUpgradeableApplicant = () => {
+    return isUpgradeable(data)
+  }
+    
   return {
     data,
     appendFormData,
     isValid,
     isApproved,
+    isUpgradeableApplicant,
   }
 }

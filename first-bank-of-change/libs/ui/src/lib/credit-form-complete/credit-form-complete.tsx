@@ -29,8 +29,13 @@ export function CreditFormComplete(props: CreditFormCompleteProps) {
   let msg;
   if (validForm && approvedForm) {
     db.addUpdateApplciation(formData.data);
-    title = 'Sucess!';
-    msg = 'Thank you, your application was submitted for further processing.';
+    if (formData.isUpgradeableApplicant()) {
+      title = 'Congrats!';
+      msg = 'You have been upgraded! Your application was submitted for further processing.';
+    } else {
+      title = 'Sucess!';
+      msg = 'Thank you, your application was submitted for further processing.';
+    }
   } else if (hasErrored) {
     title = 'System unavailable';
     msg = 'Sorry, our systems are unavailable at this time. We will email your credit card status later.';

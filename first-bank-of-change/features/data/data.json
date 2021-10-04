@@ -25,6 +25,31 @@
         "password": "GhekinIsFun"
     },
     {
+        "name": "Richie Rich",
+        "aliases": [
+            "Richie Rich is rich!"
+        ],
+        "firstName": "Richie",
+        "middleInitial": "A",
+        "lastName": "Rich",
+        "dateOfBirth": "12/12/1980",
+        "ssn": "555-55-1111",
+        "countryOfCitizenShip": "GB",
+        "countryOfCitizenShipSecondary": "US",
+        "currentEmployerName": "Acme Shoes",
+        "workPhone": "(555)444-1111",
+        "yearsEmployed": 15,
+        "monthsEmployed": 1,
+        "occupation": "CEO",
+        "monthlyHousingPayment": 18000,
+        "checkingAmount": 20000000,
+        "savingsAmount": 20000000,
+        "investmentsAmount": 200000000,
+        "monthlyIncome": 50000000,
+        "username": "richie_rich",
+        "password": "GhekinIsFun"
+    },        
+    {
         "name": "Mike Fog",
         "aliases": [
             "Mike Fog w/ a just barely failing back-end ratio"
